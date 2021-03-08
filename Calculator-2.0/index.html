@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="vuetest">
+			<button v-on:click="change()">Please push me</button>
+			<br>
+			<br>
+			<p  v-show= "num">this is a message</p>
+		 <input id="window"type="text" style=" text-align:end;    width: 31.25rem;height: 3.125rem"/>
+		
+			   <button v-for="i in 10">{{i}}</button>
+		</div>
+		<button >sdfsdf</button>
+		 <script>
+			 var data = new Vue({
+				 el:"#vuetest",
+				 data:{
+					 num:false,
+					 buttons:"buttons"
+				 },
+				 methods:{
+					 change : function(){
+						 this.num = ! this.num
+					}
+				 }
+			 })
+			 
+			 var input = document.getElementById("window")
+			  
+		 </script>
+	</body>
+</html>
